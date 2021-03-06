@@ -8,8 +8,7 @@
     "dev": "NODE_ENV=development nodemon server/index.js",
     "build:db": "NODE_ENV=test node server/database/config/build",
     "kill": "fuser -k 8080/tcp",
-    "project-setup": "npm install && cd client && npm install",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": " npm install"
   },
   "keywords": [],
   "author": "",
