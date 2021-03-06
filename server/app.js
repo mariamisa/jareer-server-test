@@ -8,12 +8,11 @@ const { serverError, clientError } = require('./controller/error');
 
 const app = express();
 
-app.set('PORT', process.env.PORT || 8080);
+app.set('PORT', process.env.PORT || 3000);
 const middleware = [
   express.json(),
   express.urlencoded({ extended: false }),
   cookieParser(),
-  express.static(join(__dirname, '..', 'client', 'build')),
   logger('dev'),
 ];
 app.use(middleware);
